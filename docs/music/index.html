@@ -1497,7 +1497,7 @@
 
         const discImg = document.getElementById('disc-img');
         if (discImg && tr.cover_image) {
-            const coverSrc = tr.cover_image.startsWith('http') ? tr.cover_image : `/${tr.cover_image}`;
+            const coverSrc = tr.cover_image.startsWith('http') ? tr.cover_image : `/5Hanayome/${tr.cover_image}`;
             discImg.src = coverSrc;
         }
 
@@ -1537,7 +1537,7 @@
         currentTrackKey = trackKey;
         applyTrackTheme(tr);
 
-        const resolvedSrc = tr.audio_url && tr.audio_url.startsWith('http') ? tr.audio_url : `/${tr.audio_url || 'audio/gotoubun-no-kimochi.mp3'}`;
+        const resolvedSrc = tr.audio_url && tr.audio_url.startsWith('http') ? tr.audio_url : `/5Hanayome/${tr.audio_url || 'audio/gotoubun-no-kimochi.mp3'}`;
         if (audio.getAttribute('data-src') !== resolvedSrc) {
             audio.src = resolvedSrc;
             audio.setAttribute('data-src', resolvedSrc);
@@ -1668,7 +1668,7 @@
         audio.addEventListener('pause', () => updatePlayUI(false));
 
         audio.addEventListener('error', () => {
-            const fallback = '/audio/gotoubun-no-kimochi.mp3';
+            const fallback = '/5Hanayome/audio/gotoubun-no-kimochi.mp3';
             if (audio.src && !audio.src.endsWith('gotoubun-no-kimochi.mp3')) {
                 audio.src = fallback;
                 audio.setAttribute('data-src', fallback);
@@ -1716,7 +1716,7 @@
         const tr = tracks[currentTrackKey];
         if (tr) {
             applyTrackTheme(tr);
-            const resolvedSrc = tr.audio_url && tr.audio_url.startsWith('http') ? tr.audio_url : `/${tr.audio_url || 'audio/gotoubun-no-kimochi.mp3'}`;
+            const resolvedSrc = tr.audio_url && tr.audio_url.startsWith('http') ? tr.audio_url : `/5Hanayome/${tr.audio_url || 'audio/gotoubun-no-kimochi.mp3'}`;
             audio.src = resolvedSrc;
             audio.setAttribute('data-src', resolvedSrc);
             updatePlayUI(false);
@@ -1725,5 +1725,7 @@
 </script>
 </body>
 </html>
+
+
 
 
