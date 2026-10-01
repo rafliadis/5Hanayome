@@ -29,7 +29,7 @@
                 </div>
 
                 {{-- Timezone Switcher Pill --}}
-                <div class="flex items-center gap-1.5 bg-slate-800 p-1.5 rounded-xl border border-white/10 text-xs font-bold">
+                <div class="flex items-center gap-1.5 bg-slate-800 p-1.5 rounded-xl border border-white/10 text-xs font-bold shrink-0">
                     <span data-i18n="onair.tz_label" class="text-slate-400 px-2">Zona Waktu:</span>
                     <button type="button" onclick="setTimezone('jst')" id="tz-btn-jst" class="tz-btn px-3 py-1 rounded-lg bg-[#ff007a] text-white shadow font-black" data-i18n="onair.tz_jst">JST (Jepang)</button>
                     <button type="button" onclick="setTimezone('wib')" id="tz-btn-wib" class="tz-btn px-3 py-1 rounded-lg text-slate-300 hover:text-white" data-i18n="onair.tz_wib">WIB (UTC+7)</button>
@@ -45,28 +45,28 @@
                     </h2>
 
                     <div class="space-y-2.5 text-xs">
-                        <div class="p-4 bg-slate-800/80 border border-white/10 rounded-2xl flex justify-between items-center hover:border-pink-500/40 transition">
+                        <div class="p-4 bg-slate-800/80 border border-white/10 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-2.5 hover:border-pink-500/40 transition">
                             <div>
                                 <span class="font-black text-white text-sm block">TBSテレビ (TBS Tokyo)</span>
                                 <span data-i18n="onair.tbs_desc" class="text-slate-400 text-[11px]">Saluran Utama Penayangan Perdana</span>
                             </div>
-                            <span id="tz-time-tbs" class="font-black text-pink-300 text-sm bg-pink-500/20 px-3 py-1.5 rounded-xl border border-pink-500/30">毎週木曜 25:28〜 JST</span>
+                            <span id="tz-time-tbs" class="font-black text-pink-300 text-xs sm:text-sm bg-pink-500/20 px-3 py-1.5 rounded-xl border border-pink-500/30 w-fit">毎週木曜 25:28〜 JST</span>
                         </div>
 
-                        <div class="p-4 bg-slate-800/80 border border-white/10 rounded-2xl flex justify-between items-center hover:border-pink-500/40 transition">
+                        <div class="p-4 bg-slate-800/80 border border-white/10 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-2.5 hover:border-pink-500/40 transition">
                             <div>
                                 <span class="font-black text-white text-sm block">サンテレビ (Sun TV)</span>
                                 <span data-i18n="onair.sun_desc" class="text-slate-400 text-[11px]">Kawasan Kansai & Hyogo</span>
                             </div>
-                            <span id="tz-time-sun" class="font-black text-pink-300 text-sm bg-pink-500/20 px-3 py-1.5 rounded-xl border border-pink-500/30">毎週金曜 24:00〜 JST</span>
+                            <span id="tz-time-sun" class="font-black text-pink-300 text-xs sm:text-sm bg-pink-500/20 px-3 py-1.5 rounded-xl border border-pink-500/30 w-fit">毎週金曜 24:00〜 JST</span>
                         </div>
 
-                        <div class="p-4 bg-slate-800/80 border border-white/10 rounded-2xl flex justify-between items-center hover:border-pink-500/40 transition">
+                        <div class="p-4 bg-slate-800/80 border border-white/10 rounded-2xl flex flex-col sm:flex-row justify-between sm:items-center gap-2.5 hover:border-pink-500/40 transition">
                             <div>
                                 <span class="font-black text-white text-sm block">BS11 (Nippon BS)</span>
                                 <span data-i18n="onair.bs11_desc" class="text-slate-400 text-[11px]">Siaran Satelit Nasional Seluruh Jepang</span>
                             </div>
-                            <span id="tz-time-bs11" class="font-black text-pink-300 text-sm bg-pink-500/20 px-3 py-1.5 rounded-xl border border-pink-500/30">毎週日曜 23:30〜 JST</span>
+                            <span id="tz-time-bs11" class="font-black text-pink-300 text-xs sm:text-sm bg-pink-500/20 px-3 py-1.5 rounded-xl border border-pink-500/30 w-fit">毎週日曜 23:30〜 JST</span>
                         </div>
                     </div>
                 </div>

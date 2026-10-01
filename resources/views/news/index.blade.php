@@ -30,12 +30,12 @@
                 </div>
 
                 {{-- Filter Kategori Berita --}}
-                <div class="flex items-center gap-1.5 flex-wrap">
-                    <button type="button" onclick="filterNews('all')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-[#ff007a] text-white shadow-sm" data-category="all" data-i18n="news.filter_all">All</button>
-                    <button type="button" onclick="filterNews('bddvd')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20" data-category="bddvd" data-i18n="news.filter_bddvd">BD & DVD</button>
-                    <button type="button" onclick="filterNews('event')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20" data-category="event" data-i18n="news.filter_event">Event</button>
-                    <button type="button" onclick="filterNews('music')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20" data-category="music" data-i18n="news.filter_music">Music</button>
-                    <button type="button" onclick="filterNews('goods')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20" data-category="goods" data-i18n="news.filter_goods">Goods</button>
+                <div class="flex items-center gap-1.5 overflow-x-auto max-w-full py-1 custom-scrollbar">
+                    <button type="button" onclick="filterNews('all')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-[#ff007a] text-white shadow-sm shrink-0" data-category="all" data-i18n="news.filter_all">All</button>
+                    <button type="button" onclick="filterNews('bddvd')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20 shrink-0" data-category="bddvd" data-i18n="news.filter_bddvd">BD & DVD</button>
+                    <button type="button" onclick="filterNews('event')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20 shrink-0" data-category="event" data-i18n="news.filter_event">Event</button>
+                    <button type="button" onclick="filterNews('music')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20 shrink-0" data-category="music" data-i18n="news.filter_music">Music</button>
+                    <button type="button" onclick="filterNews('goods')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20 shrink-0" data-category="goods" data-i18n="news.filter_goods">Goods</button>
                 </div>
             </div>
 

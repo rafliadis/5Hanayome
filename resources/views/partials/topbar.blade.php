@@ -1,19 +1,19 @@
 {{-- Top Bar TBS Official Style --}}
-<div class="bg-slate-950 text-slate-300 text-xs border-b border-white/10 px-4 sm:px-6 py-1.5 flex items-center justify-between select-none">
+<div class="bg-slate-950 text-slate-300 text-xs border-b border-white/10 px-3 sm:px-6 py-1.5 flex items-center justify-between select-none w-full max-w-full overflow-hidden">
     {{-- Pojok Kiri: Logo/Teks TBS Portal --}}
-    <div class="flex items-center gap-2.5">
-        <span class="inline-flex items-center justify-center bg-white text-slate-950 font-black px-2 py-0.5 rounded text-[10px] tracking-wider shadow-sm">
+    <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+        <span class="inline-flex items-center justify-center bg-white text-slate-950 font-black px-2 py-0.5 rounded text-[10px] tracking-wider shadow-sm flex-shrink-0">
             TBS
         </span>
         <span class="text-white/20">/</span>
-        <span data-i18n="topbar.portal" class="text-slate-300 font-medium text-[11px] hidden sm:inline">
+        <span data-i18n="topbar.portal" class="text-slate-300 font-medium text-[11px] truncate hidden sm:inline">
             TBSテレビ アニメ公式ポータル
         </span>
     </div>
 
     {{-- Pojok Kanan: Status Siaran & Tagline --}}
-    <div class="flex items-center gap-3 text-[11px]">
-        <div class="flex items-center gap-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-full text-[10px] font-semibold">
+    <div class="flex items-center gap-2 sm:gap-3 text-[11px] flex-shrink-0">
+        <div class="flex items-center gap-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 sm:px-2.5 py-0.5 rounded-full text-[10px] font-semibold">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
             <span data-i18n="topbar.broadcast">TBS・BS11ほかにて放送中</span>
         </div>

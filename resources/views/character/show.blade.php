@@ -296,14 +296,14 @@
 
 {{-- LIGHTBOX MODAL FULLSCREEN --}}
 <div id="lightbox-modal"
-     class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 select-none"
+     class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-4 select-none max-w-full overflow-hidden"
      role="dialog"
      aria-modal="true"
      onclick="closeLightbox()">
 
     <button type="button"
             onclick="closeLightbox()"
-            class="absolute top-4 right-4 text-white/80 hover:text-white bg-black/40 hover:bg-[#ff007a] rounded-full p-3 transition z-20 focus:outline-none"
+            class="absolute top-3 sm:top-4 right-3 sm:right-4 text-white/80 hover:text-white bg-black/50 hover:bg-[#ff007a] rounded-full w-11 h-11 flex items-center justify-center transition z-20 focus:outline-none shadow-lg"
             aria-label="Tutup Galeri (Escape)">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -312,7 +312,7 @@
 
     <button type="button"
             onclick="prevLightbox(event)"
-            class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white bg-black/40 hover:bg-[#ff007a] rounded-full p-3 transition z-20 focus:outline-none"
+            class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white bg-black/50 hover:bg-[#ff007a] rounded-full w-11 h-11 flex items-center justify-center transition z-20 focus:outline-none shadow-lg"
             aria-label="Foto Sebelumnya">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -321,14 +321,14 @@
 
     <button type="button"
             onclick="nextLightbox(event)"
-            class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white bg-black/40 hover:bg-[#ff007a] rounded-full p-3 transition z-20 focus:outline-none"
+            class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white bg-black/50 hover:bg-[#ff007a] rounded-full w-11 h-11 flex items-center justify-center transition z-20 focus:outline-none shadow-lg"
             aria-label="Foto Selanjutnya">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
     </button>
 
-    <div class="max-w-4xl max-h-[85vh] flex flex-col items-center justify-center relative z-10" onclick="event.stopPropagation()">
+    <div class="max-w-4xl max-h-[85vh] w-full flex flex-col items-center justify-center relative z-10 px-2" onclick="event.stopPropagation()">
         <img id="lightbox-img"
              src=""
              alt="Pratinjau Galeri Karakter"

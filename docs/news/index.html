@@ -100,6 +100,9 @@
             font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', 'Plus Jakarta Sans', sans-serif;
             -webkit-tap-highlight-color: transparent;
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
         }
 
         /* Focus rings for accessibility */
@@ -143,30 +146,30 @@
     </style>
 
     </head>
-<body class="bg-slate-950 text-slate-800 antialiased min-h-screen flex flex-col selection:bg-[#ff007a] selection:text-white">
+<body class="bg-slate-950 text-slate-800 antialiased min-h-screen w-full max-w-full overflow-x-hidden flex flex-col selection:bg-[#ff007a] selection:text-white">
 
-    
+
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[99999] focus:bg-[#ff007a] focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold">
         Skip to main content
     </a>
 
-    
+
     <div class="flex-shrink-0 z-50 sticky top-0">
-        <div class="bg-slate-950 text-slate-300 text-xs border-b border-white/10 px-4 sm:px-6 py-1.5 flex items-center justify-between select-none">
-    
-    <div class="flex items-center gap-2.5">
-        <span class="inline-flex items-center justify-center bg-white text-slate-950 font-black px-2 py-0.5 rounded text-[10px] tracking-wider shadow-sm">
+        <div class="bg-slate-950 text-slate-300 text-xs border-b border-white/10 px-3 sm:px-6 py-1.5 flex items-center justify-between select-none w-full max-w-full overflow-hidden">
+
+    <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+        <span class="inline-flex items-center justify-center bg-white text-slate-950 font-black px-2 py-0.5 rounded text-[10px] tracking-wider shadow-sm flex-shrink-0">
             TBS
         </span>
         <span class="text-white/20">/</span>
-        <span data-i18n="topbar.portal" class="text-slate-300 font-medium text-[11px] hidden sm:inline">
+        <span data-i18n="topbar.portal" class="text-slate-300 font-medium text-[11px] truncate hidden sm:inline">
             TBSテレビ アニメ公式ポータル
         </span>
     </div>
 
-    
-    <div class="flex items-center gap-3 text-[11px]">
-        <div class="flex items-center gap-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-full text-[10px] font-semibold">
+
+    <div class="flex items-center gap-2 sm:gap-3 text-[11px] flex-shrink-0">
+        <div class="flex items-center gap-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 sm:px-2.5 py-0.5 rounded-full text-[10px] font-semibold">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
             <span data-i18n="topbar.broadcast">TBS・BS11ほかにて放送中</span>
         </div>
@@ -176,20 +179,20 @@
 </div>
     </div>
 
-    
+
     <div class="flex-shrink-0 z-40">
-        <header class="bg-black/45 backdrop-blur-md text-white h-14 sm:h-16 flex items-center border-b border-white/10 shadow-lg relative z-40 transition-colors duration-300">
-    <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="bg-black/45 backdrop-blur-md text-white h-14 sm:h-16 flex items-center border-b border-white/10 shadow-lg relative z-40 transition-colors duration-300 w-full max-w-full">
+    <div class="max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between gap-2 sm:gap-4">
 
-            
-            <a href="/5Hanayome" class="flex items-center gap-2.5 sm:gap-3 group select-none flex-shrink-0 focus:outline-none">
-                <span class="bg-[#ff007a] text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-0.5 sm:py-1 rounded-full shadow-md transition-transform group-hover:scale-105 border border-white/30 tracking-wider">
+
+            <a href="/5Hanayome" class="flex items-center gap-2 sm:gap-3 group select-none min-w-0 flex-shrink focus:outline-none">
+                <span class="bg-[#ff007a] text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-0.5 sm:py-1 rounded-full shadow-md transition-transform group-hover:scale-105 border border-white/30 tracking-wider flex-shrink-0">
                     TBS
                 </span>
-                <div class="leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                    <span class="block font-black text-base sm:text-xl tracking-wide text-white group-hover:text-pink-200 transition">五等分の花嫁</span>
-                    <span class="block text-[8px] sm:text-[9px] text-pink-200/90 font-semibold tracking-wider font-serif">THE QUINTESSENTIAL QUINTUPLETS</span>
+                <div class="leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] min-w-0">
+                    <span class="block font-black text-base sm:text-xl tracking-wide text-white group-hover:text-pink-200 transition truncate">五等分の花嫁</span>
+                    <span class="block text-[7px] sm:text-[9px] text-pink-200/90 font-semibold tracking-wider font-serif truncate">THE QUINTESSENTIAL QUINTUPLETS</span>
                 </div>
             </a>
 
@@ -389,154 +392,12 @@
 </script>
 
 
-<div id="nav-overlay"
-     class="fixed inset-0 z-[9999] bg-slate-950/90 backdrop-blur-xl hidden flex flex-col justify-between p-6 sm:p-10 select-none transition-all duration-300"
-     role="dialog"
-     aria-modal="true"
-     aria-label="Navigation Menu Modal">
-
-    
-    <div class="flex items-center justify-between border-b border-white/15 pb-4 max-w-5xl mx-auto w-full">
-        <div class="flex items-center gap-3">
-            <span class="bg-[#ff007a] text-white font-black text-xs px-2.5 py-1 rounded-full shadow border border-white/30">
-                五等分
-            </span>
-            <span class="font-black text-lg sm:text-xl text-white tracking-wider font-serif">TBS ANIME PORTAL</span>
-        </div>
-
-        <button type="button"
-                onclick="closeNavOverlay()"
-                aria-label="Tutup Menu (Escape)"
-                class="w-11 h-11 rounded-full bg-white/15 hover:bg-[#ff007a] text-white transition flex items-center justify-center border border-white/30 focus:outline-none hover:scale-105">
-            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-    </div>
-
-    
-    <div class="my-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 max-w-5xl mx-auto w-full py-6">
-        
-        <a href="/5Hanayome" class="p-4 sm:p-5 rounded-2xl bg-white/10 hover:bg-[#ff007a] border-white/15 border text-white font-extrabold text-lg sm:text-xl text-left transition transform hover:-translate-y-1 shadow-lg flex items-center justify-between group">
-            <div class="flex items-center gap-3">
-                <span class="text-pink-300 group-hover:text-white transition">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                </span>
-                <span data-i18n="nav.home">Home</span>
-            </div>
-            <span class="text-xs text-white/60 group-hover:text-white font-serif">ホーム &rarr;</span>
-        </a>
-
-        
-        <a href="/5Hanayome/news" class="p-4 sm:p-5 rounded-2xl bg-[#ff007a] border-[#ff007a] border text-white font-extrabold text-lg sm:text-xl text-left transition transform hover:-translate-y-1 shadow-lg flex items-center justify-between group">
-            <div class="flex items-center gap-3">
-                <span class="text-pink-300 group-hover:text-white transition">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
-                </span>
-                <span data-i18n="nav.news">News</span>
-            </div>
-            <span class="text-xs text-white/60 group-hover:text-white font-serif">ニュース &rarr;</span>
-        </a>
-
-        
-        <a href="/5Hanayome/karakter" class="p-4 sm:p-5 rounded-2xl bg-white/10 hover:bg-[#ff007a] border-white/15 border text-white font-extrabold text-lg sm:text-xl text-left transition transform hover:-translate-y-1 shadow-lg flex items-center justify-between group">
-            <div class="flex items-center gap-3">
-                <span class="text-pink-300 group-hover:text-white transition">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                </span>
-                <span data-i18n="nav.character">Character</span>
-            </div>
-            <span class="text-xs text-white/60 group-hover:text-white font-serif">キャラクター &rarr;</span>
-        </a>
-
-        
-        <a href="/5Hanayome/staff-cast" class="p-4 sm:p-5 rounded-2xl bg-white/10 hover:bg-[#ff007a] border-white/15 border text-white font-extrabold text-lg sm:text-xl text-left transition transform hover:-translate-y-1 shadow-lg flex items-center justify-between group">
-            <div class="flex items-center gap-3">
-                <span class="text-pink-300 group-hover:text-white transition">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z"/></svg>
-                </span>
-                <span data-i18n="nav.staff_cast">Staff & Cast</span>
-            </div>
-            <span class="text-xs text-white/60 group-hover:text-white font-serif">スタッフ・キャスト &rarr;</span>
-        </a>
-
-        
-        <a href="/5Hanayome/on-air" class="p-4 sm:p-5 rounded-2xl bg-white/10 hover:bg-[#ff007a] border-white/15 border text-white font-extrabold text-lg sm:text-xl text-left transition transform hover:-translate-y-1 shadow-lg flex items-center justify-between group">
-            <div class="flex items-center gap-3">
-                <span class="text-pink-300 group-hover:text-white transition">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                </span>
-                <span data-i18n="nav.onair">On Air</span>
-            </div>
-            <span class="text-xs text-white/60 group-hover:text-white font-serif">放送情報 &rarr;</span>
-        </a>
-
-        
-        <a href="/5Hanayome/music" class="p-4 sm:p-5 rounded-2xl bg-white/10 hover:bg-[#ff007a] border-white/15 border text-white font-extrabold text-lg sm:text-xl text-left transition transform hover:-translate-y-1 shadow-lg flex items-center justify-between group">
-            <div class="flex items-center gap-3">
-                <span class="text-pink-300 group-hover:text-white transition">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
-                </span>
-                <span data-i18n="nav.music">Music</span>
-            </div>
-            <span class="text-xs text-white/60 group-hover:text-white font-serif">音楽情報 &rarr;</span>
-        </a>
-
-        
-        <a href="/5Hanayome/goods" class="p-4 sm:p-5 rounded-2xl bg-white/10 hover:bg-[#ff007a] border-white/15 border text-white font-extrabold text-lg sm:text-xl text-left transition transform hover:-translate-y-1 shadow-lg flex items-center justify-between group sm:col-span-2 lg:col-span-3">
-            <div class="flex items-center gap-3">
-                <span class="text-pink-300 group-hover:text-white transition">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-                </span>
-                <span data-i18n="nav.goods">Goods</span>
-            </div>
-            <span class="text-xs text-white/60 group-hover:text-white font-serif">公式グッズ &rarr;</span>
-        </a>
-    </div>
-
-    
-    <div class="border-t border-white/15 pt-4 text-center text-xs text-white/60 max-w-5xl mx-auto w-full">
-        <span>© 春場ねぎ・講談社／「五等分の花嫁」製作委員会・TBSテレビ</span>
-    </div>
-</div>
-
-<script>
-    function toggleNavOverlay() {
-        const overlay = document.getElementById('nav-overlay');
-        const btn = document.getElementById('btn-hamburger');
-        if (overlay) {
-            overlay.classList.remove('hidden');
-            overlay.classList.add('flex');
-            btn.setAttribute('aria-expanded', 'true');
-        }
-    }
-
-    function closeNavOverlay() {
-        const overlay = document.getElementById('nav-overlay');
-        const btn = document.getElementById('btn-hamburger');
-        if (overlay) {
-            overlay.classList.add('hidden');
-            overlay.classList.remove('flex');
-            btn.setAttribute('aria-expanded', 'false');
-        }
-    }
-
-    // Escape key listener untuk menutup overlay
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            closeNavOverlay();
-        }
-    });
-</script>
-    </div>
-
-    
     <!-- DIUBAH: Hapus overflow-hidden dan h-[calc(...)] agar halaman bisa di-scroll bebas -->
     <main id="main-content" class="w-full flex-1 relative flex flex-col bg-slate-950">
         <div class="w-full min-h-full py-8 px-4 sm:px-6 lg:px-8 bg-slate-950 text-slate-100 flex-grow">
     <div class="max-w-7xl mx-auto w-full space-y-6">
 
-        
+
         <nav class="flex items-center gap-2 text-xs sm:text-sm text-slate-400 select-none" aria-label="Breadcrumb">
             <a href="/5Hanayome" data-i18n="nav.home" class="hover:text-[#ff007a] transition flex items-center gap-1">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
@@ -546,9 +407,9 @@
             <span class="font-black text-[#ff007a]">News</span>
         </nav>
 
-        
+
         <div class="bg-slate-900/90 rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl space-y-6">
-            
+
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-5">
                 <div class="flex items-center gap-3">
                     <div class="w-2.5 h-8 bg-[#ff007a] rounded-full"></div>
@@ -558,13 +419,13 @@
                     </div>
                 </div>
 
-                
-                <div class="flex items-center gap-1.5 flex-wrap">
-                    <button type="button" onclick="filterNews('all')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-[#ff007a] text-white shadow-sm" data-category="all" data-i18n="news.filter_all">All</button>
-                    <button type="button" onclick="filterNews('bddvd')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20" data-category="bddvd" data-i18n="news.filter_bddvd">BD & DVD</button>
-                    <button type="button" onclick="filterNews('event')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20" data-category="event" data-i18n="news.filter_event">Event</button>
-                    <button type="button" onclick="filterNews('music')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20" data-category="music" data-i18n="news.filter_music">Music</button>
-                    <button type="button" onclick="filterNews('goods')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20" data-category="goods" data-i18n="news.filter_goods">Goods</button>
+
+                <div class="flex items-center gap-1.5 overflow-x-auto max-w-full py-1 custom-scrollbar">
+                    <button type="button" onclick="filterNews('all')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-[#ff007a] text-white shadow-sm shrink-0" data-category="all" data-i18n="news.filter_all">All</button>
+                    <button type="button" onclick="filterNews('bddvd')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20 shrink-0" data-category="bddvd" data-i18n="news.filter_bddvd">BD & DVD</button>
+                    <button type="button" onclick="filterNews('event')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20 shrink-0" data-category="event" data-i18n="news.filter_event">Event</button>
+                    <button type="button" onclick="filterNews('music')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20 shrink-0" data-category="music" data-i18n="news.filter_music">Music</button>
+                    <button type="button" onclick="filterNews('goods')" class="news-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20 shrink-0" data-category="goods" data-i18n="news.filter_goods">Goods</button>
                 </div>
             </div>
 

@@ -47,6 +47,9 @@
             padding: 0;
             font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', 'Plus Jakarta Sans', sans-serif;
             -webkit-tap-highlight-color: transparent;
+            overflow-x: hidden;
+            max-width: 100vw;
+            width: 100%;
         }
 
         /* Focus rings for accessibility */
@@ -80,7 +83,7 @@
     </style>
 </head>
 {{-- <!-- DIUBAH: Hapus class h-screen dan overflow-hidden, diganti min-h-screen dan bg-slate-950 --> --}}
-<body class="bg-slate-950 text-slate-800 antialiased min-h-screen flex flex-col selection:bg-[#ff007a] selection:text-white">
+<body class="bg-slate-950 text-slate-800 antialiased min-h-screen w-full max-w-full overflow-x-hidden flex flex-col selection:bg-[#ff007a] selection:text-white">
 
     {{-- Accessibility Skip Link --}}
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[99999] focus:bg-[#ff007a] focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold">
@@ -91,21 +94,21 @@
          BAGIAN 1: TOP BAR (PALING ATAS, STICKY)
          Pertahankan top bar tipis (logo TBS placeholder + info Portal Resmi / Status Tayang)
          ========================================================================= --}}
-    <div class="bg-slate-950 text-slate-300 text-xs border-b border-white/10 px-4 sm:px-6 py-1.5 flex items-center justify-between select-none sticky top-0 z-50">
+    <div class="bg-slate-950 text-slate-300 text-xs border-b border-white/10 px-3 sm:px-6 py-1.5 flex items-center justify-between select-none sticky top-0 z-50 w-full max-w-full overflow-hidden">
         {{-- Pojok Kiri: Logo/Teks TBS Portal --}}
-        <div class="flex items-center gap-2.5">
-            <span class="inline-flex items-center justify-center bg-white text-slate-950 font-black px-2 py-0.5 rounded text-[10px] tracking-wider shadow-sm">
+        <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+            <span class="inline-flex items-center justify-center bg-white text-slate-950 font-black px-2 py-0.5 rounded text-[10px] tracking-wider shadow-sm flex-shrink-0">
                 TBS
             </span>
             <span class="text-white/20">/</span>
-            <span data-i18n="topbar.portal" class="text-slate-300 font-medium text-[11px] hidden sm:inline">
+            <span data-i18n="topbar.portal" class="text-slate-300 font-medium text-[11px] truncate hidden sm:inline">
                 TBSテレビ アニメ公式ポータル
             </span>
         </div>
 
         {{-- Pojok Kanan: Status Siaran & Tagline --}}
-        <div class="flex items-center gap-3 text-[11px]">
-            <div class="flex items-center gap-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-0.5 rounded-full text-[10px] font-semibold">
+        <div class="flex items-center gap-2 sm:gap-3 text-[11px] flex-shrink-0">
+            <div class="flex items-center gap-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 sm:px-2.5 py-0.5 rounded-full text-[10px] font-semibold">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
                 <span data-i18n="topbar.broadcast">TBS・BS11ほかにて放送中</span>
             </div>
@@ -118,17 +121,17 @@
          BAGIAN 2: HEADER MELAYANG TRANSPARAN
          <!-- DIUBAH: Header disederhanakan TANPA menu horizontal, hanya Switcher Bahasa + 1 Hamburger Bulat -->
          ========================================================================= --}}
-    <header class="absolute top-[33px] inset-x-0 z-40 bg-gradient-to-b from-black/70 via-black/30 to-transparent text-white transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+    <header class="absolute top-[33px] inset-x-0 z-40 bg-gradient-to-b from-black/70 via-black/30 to-transparent text-white transition-all duration-300 w-full max-w-full">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
 
             {{-- Logo Anime Resmi TBS di Kiri --}}
-            <a href="{{ route('home') }}" class="flex items-center gap-2.5 sm:gap-3 group select-none flex-shrink-0 focus:outline-none">
-                <span class="bg-[#ff007a] text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-0.5 sm:py-1 rounded-full shadow-md transition-transform group-hover:scale-105 border border-white/30 tracking-wider">
+            <a href="{{ route('home') }}" class="flex items-center gap-2 sm:gap-3 group select-none min-w-0 flex-shrink focus:outline-none">
+                <span class="bg-[#ff007a] text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-0.5 sm:py-1 rounded-full shadow-md transition-transform group-hover:scale-105 border border-white/30 tracking-wider flex-shrink-0">
                     TBS
                 </span>
-                <div class="leading-tight text-shadow-hero">
-                    <span class="block font-black text-lg sm:text-2xl tracking-wide text-white group-hover:text-pink-200 transition">五等分の花嫁</span>
-                    <span class="block text-[8px] sm:text-[10px] text-pink-200/90 font-semibold tracking-wider font-serif">THE QUINTESSENTIAL QUINTUPLETS</span>
+                <div class="leading-tight text-shadow-hero min-w-0">
+                    <span class="block font-black text-base sm:text-2xl tracking-wide text-white group-hover:text-pink-200 transition truncate">五等分の花嫁</span>
+                    <span class="block text-[7px] sm:text-[10px] text-pink-200/90 font-semibold tracking-wider font-serif truncate">THE QUINTESSENTIAL QUINTUPLETS</span>
                 </div>
             </a>
 
@@ -302,16 +305,16 @@
          KONTEN UTAMA BERANDA PANJANG (LONG SCROLLABLE PAGE)
          <!-- DIUBAH: Halaman panjang dari atas ke bawah mengikuti struktur situs resmi TBS -->
          ========================================================================= --}}
-    <main id="main-content" class="w-full flex-grow relative bg-white">
+    <main id="main-content" class="w-full max-w-full overflow-x-hidden flex-grow relative bg-white">
 
         {{-- =========================================================================
              BAGIAN 3 & 4: HERO SECTION DENGAN PROPORSI ASLI + TOMBOL SHARE MELAYANG
              <!-- DIUBAH: Menggunakan aspect-ratio (bukan dipaksa 100vh), wallpaper tampil penuh -->
              ========================================================================= --}}
-        <section class="relative w-full overflow-hidden bg-slate-950">
+        <section class="relative w-full max-w-full overflow-hidden bg-slate-950">
 
             {{-- Wrapper Gambar dengan Aspect Ratio Alami --}}
-            <div class="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/9] min-h-[480px] max-h-[920px] overflow-hidden">
+            <div class="relative w-full aspect-[4/5] sm:aspect-[16/10] lg:aspect-[16/9] min-h-[420px] sm:min-h-[480px] max-h-[920px] overflow-hidden">
 
                 {{-- 1. Wallpaper Visual Utama --}}
                 <img
@@ -366,17 +369,17 @@
                      <!-- HAPUS: Kartu frosted glass gelap besar dihapus agar wajah karakter tidak tertutup -->
                      <!-- DIUBAH: Menggunakan tipografi judul besar dengan drop shadow langsung di atas wallpaper -->
                      ========================================================================= --}}
-                <div class="absolute top-24 sm:top-28 lg:top-32 left-4 sm:left-12 lg:left-24 z-20 max-w-xl space-y-2 select-none">
-                    <div class="inline-flex items-center gap-2 bg-black/40 backdrop-blur-md border border-pink-400/50 px-3.5 py-1 rounded-full text-pink-300 text-[11px] sm:text-xs font-black shadow-lg">
-                        <span class="w-2 h-2 rounded-full bg-[#ff007a] animate-ping"></span>
-                        <span data-i18n="hero.tagline">かわいさ500%の五人五色ラブコメディ！</span>
+                <div class="absolute top-20 sm:top-28 lg:top-32 left-3.5 right-3.5 sm:right-auto sm:left-12 lg:left-24 z-20 max-w-[calc(100vw-1.75rem)] sm:max-w-xl space-y-1.5 sm:space-y-2 select-none pr-2">
+                    <div class="inline-flex items-center gap-1.5 sm:gap-2 bg-black/50 backdrop-blur-md border border-pink-400/50 px-3 py-1 rounded-full text-pink-300 text-[10px] sm:text-xs font-black shadow-lg max-w-full">
+                        <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#ff007a] animate-ping flex-shrink-0"></span>
+                        <span data-i18n="hero.tagline" class="truncate sm:whitespace-normal">かわいさ500%の五人五色ラブコメディ！</span>
                     </div>
 
-                    <h1 data-i18n="hero.title" class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white text-shadow-hero font-sans leading-none">
+                    <h1 data-i18n="hero.title" class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white text-shadow-hero font-sans leading-none break-words">
                         五等分の花嫁
                     </h1>
 
-                    <p data-i18n="hero.subtitle" class="text-xs sm:text-sm lg:text-base font-bold text-pink-200 tracking-widest font-serif text-shadow-sub uppercase">
+                    <p data-i18n="hero.subtitle" class="text-[10px] sm:text-sm lg:text-base font-bold text-pink-200 tracking-widest font-serif text-shadow-sub uppercase truncate">
                         The Quintessential Quintuplets
                     </p>
 
@@ -388,18 +391,18 @@
                 {{-- =========================================================================
                      TOMBOL PLAY VIDEO PV DEKORATIF (POJOK KANAN BAWAH HERO)
                      ========================================================================= --}}
-                <div class="absolute right-4 sm:right-8 lg:right-12 bottom-6 sm:bottom-8 z-20 flex items-center gap-3">
+                <div class="absolute right-3 sm:right-8 lg:right-12 bottom-4 sm:bottom-8 z-20 flex items-center gap-3">
                     <button type="button"
                             onclick="openPvModal()"
                             aria-label="Tonton PV Anime Terbaru"
-                            class="group flex items-center gap-3 bg-black/60 hover:bg-black/80 backdrop-blur-md pl-3 pr-4 sm:pl-4 sm:pr-5 py-2.5 rounded-full border border-pink-500/60 shadow-2xl transition transform hover:scale-105 active:scale-95 text-white">
-                        <div class="relative w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-gradient-to-tr from-[#ff007a] to-rose-500 flex items-center justify-center text-white shadow-lg shadow-pink-500/40">
+                            class="group flex items-center gap-2.5 sm:gap-3 bg-black/60 hover:bg-black/80 backdrop-blur-md pl-2.5 pr-3.5 sm:pl-4 sm:pr-5 py-2 sm:py-2.5 rounded-full border border-pink-500/60 shadow-2xl transition transform hover:scale-105 active:scale-95 text-white">
+                        <div class="relative w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-gradient-to-tr from-[#ff007a] to-rose-500 flex items-center justify-center text-white shadow-lg shadow-pink-500/40 flex-shrink-0">
                             <span class="absolute inset-0 rounded-full border-2 border-pink-400 animate-pulse-ring pointer-events-none"></span>
-                            <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                         </div>
                         <div class="text-left">
-                            <span class="block text-[9px] sm:text-[10px] uppercase font-bold text-pink-300 font-serif tracking-widest">OFFICIAL PV</span>
-                            <span data-i18n="hero.btn_pv" class="block text-xs sm:text-sm font-black text-white group-hover:text-pink-200 transition">プロモーション映像</span>
+                            <span class="block text-[8px] sm:text-[10px] uppercase font-bold text-pink-300 font-serif tracking-widest">OFFICIAL PV</span>
+                            <span data-i18n="hero.btn_pv" class="block text-[11px] sm:text-sm font-black text-white group-hover:text-pink-200 transition">プロモーション映像</span>
                         </div>
                     </button>
                 </div>
@@ -411,19 +414,19 @@
              BAGIAN 5: BADGE PROMO (PILL DENGAN BORDER PINK)
              <!-- DIUBAH: Mengikuti gaya kotak promo "新作アニメプロジェクト" referensi TBS -->
              ========================================================================= --}}
-        <section class="relative z-30 -mt-5 sm:-mt-7 px-4 max-w-4xl mx-auto">
+        <section class="relative z-30 -mt-5 sm:-mt-7 px-3 sm:px-4 max-w-4xl mx-auto w-full">
             <a href="{{ route('news') }}"
-               class="block bg-white hover:bg-pink-50/70 border-2 border-[#ff007a] rounded-full p-3 sm:p-4 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 group">
-                <div class="flex items-center justify-between gap-3 sm:gap-4 px-2 sm:px-4">
-                    <div class="flex items-center gap-3 sm:gap-4">
-                        <span class="bg-[#ff007a] text-white text-[10px] sm:text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-sm flex-shrink-0">
+               class="block bg-white hover:bg-pink-50/70 border-2 border-[#ff007a] rounded-2xl sm:rounded-full p-3 sm:p-4 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 group">
+                <div class="flex items-center justify-between gap-2.5 sm:gap-4 px-1 sm:px-4">
+                    <div class="flex items-center gap-2.5 sm:gap-4 min-w-0">
+                        <span class="bg-[#ff007a] text-white text-[10px] sm:text-xs font-black px-2.5 sm:px-3 py-1 rounded-full uppercase tracking-wider shadow-sm flex-shrink-0">
                             PROJECT
                         </span>
-                        <div class="text-left">
-                            <h2 data-i18n="promo.badge_title" class="text-xs sm:text-sm md:text-base font-black text-slate-900 group-hover:text-[#ff007a] transition leading-tight">
+                        <div class="text-left min-w-0">
+                            <h2 data-i18n="promo.badge_title" class="text-xs sm:text-sm md:text-base font-black text-slate-900 group-hover:text-[#ff007a] transition leading-tight break-words line-clamp-2 sm:line-clamp-none">
                                 新作アニメプロジェクト始動！TVアニメ「五等分の花嫁＊」制作決定
                             </h2>
-                            <p data-i18n="promo.badge_sub" class="text-[10px] sm:text-xs text-slate-500 font-medium hidden sm:block mt-0.5">
+                            <p data-i18n="promo.badge_sub" class="text-[10px] sm:text-xs text-slate-500 font-medium hidden sm:block mt-0.5 truncate">
                                 原案・完全監修：春場ねぎ ／ 新婚旅行編を描く完全新作アニメーション企画
                             </p>
                         </div>

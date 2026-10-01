@@ -29,11 +29,11 @@
                 </div>
 
                 {{-- Filter Kategori Barang --}}
-                <div class="flex items-center gap-1.5 flex-wrap">
+                <div class="flex items-center gap-1.5 overflow-x-auto max-w-full py-1 custom-scrollbar">
                     @foreach ($goodsCategories as $catKey => $catName)
                         <button type="button"
                                 onclick="filterGoods('{{ $catKey }}')"
-                                class="goods-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition {{ $catKey === 'all' ? 'bg-[#ff007a] text-white shadow-sm' : 'bg-white/10 text-slate-300 hover:bg-white/20' }}"
+                                class="goods-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition shrink-0 {{ $catKey === 'all' ? 'bg-[#ff007a] text-white shadow-sm' : 'bg-white/10 text-slate-300 hover:bg-white/20' }}"
                                 data-category="{{ $catKey }}"
                                 data-i18n="goods.cat_{{ $catKey }}">
                             {{ $catName }}

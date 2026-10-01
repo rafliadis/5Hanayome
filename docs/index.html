@@ -47,6 +47,9 @@
             padding: 0;
             font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', 'Plus Jakarta Sans', sans-serif;
             -webkit-tap-highlight-color: transparent;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
         }
 
         /* Focus rings for accessibility */
@@ -80,29 +83,29 @@
     </style>
 </head>
 
-<body class="bg-slate-950 text-slate-800 antialiased min-h-screen flex flex-col selection:bg-[#ff007a] selection:text-white">
+<body class="bg-slate-950 text-slate-800 antialiased min-h-screen w-full max-w-full overflow-x-hidden flex flex-col selection:bg-[#ff007a] selection:text-white">
 
-    
+
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[99999] focus:bg-[#ff007a] focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold">
         Skip to main content
     </a>
 
-    
-    <div class="bg-slate-950 text-slate-300 text-xs border-b border-white/10 px-4 sm:px-6 py-1.5 flex items-center justify-between select-none sticky top-0 z-50">
-        
-        <div class="flex items-center gap-2.5">
-            <span class="inline-flex items-center justify-center bg-white text-slate-950 font-black px-2 py-0.5 rounded text-[10px] tracking-wider shadow-sm">
+
+    <div class="bg-slate-950 text-slate-300 text-xs border-b border-white/10 px-3 sm:px-6 py-1.5 flex items-center justify-between select-none sticky top-0 z-50 w-full max-w-full overflow-hidden">
+
+        <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+            <span class="inline-flex items-center justify-center bg-white text-slate-950 font-black px-2 py-0.5 rounded text-[10px] tracking-wider shadow-sm flex-shrink-0">
                 TBS
             </span>
             <span class="text-white/20">/</span>
-            <span data-i18n="topbar.portal" class="text-slate-300 font-medium text-[11px] hidden sm:inline">
+            <span data-i18n="topbar.portal" class="text-slate-300 font-medium text-[11px] truncate hidden sm:inline">
                 TBSテレビ アニメ公式ポータル
             </span>
         </div>
 
-        
-        <div class="flex items-center gap-3 text-[11px]">
-            <div class="flex items-center gap-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-0.5 rounded-full text-[10px] font-semibold">
+
+        <div class="flex items-center gap-2 sm:gap-3 text-[11px] flex-shrink-0">
+            <div class="flex items-center gap-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 sm:px-2.5 py-0.5 rounded-full text-[10px] font-semibold">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
                 <span data-i18n="topbar.broadcast">TBS・BS11ほかにて放送中</span>
             </div>
@@ -111,18 +114,18 @@
         </div>
     </div>
 
-    
-    <header class="absolute top-[33px] inset-x-0 z-40 bg-gradient-to-b from-black/70 via-black/30 to-transparent text-white transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
 
-            
-            <a href="/5Hanayome" class="flex items-center gap-2.5 sm:gap-3 group select-none flex-shrink-0 focus:outline-none">
-                <span class="bg-[#ff007a] text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-0.5 sm:py-1 rounded-full shadow-md transition-transform group-hover:scale-105 border border-white/30 tracking-wider">
+    <header class="absolute top-[33px] inset-x-0 z-40 bg-gradient-to-b from-black/70 via-black/30 to-transparent text-white transition-all duration-300 w-full max-w-full">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+
+
+            <a href="/5Hanayome" class="flex items-center gap-2 sm:gap-3 group select-none min-w-0 flex-shrink focus:outline-none">
+                <span class="bg-[#ff007a] text-white font-extrabold text-[10px] sm:text-xs px-2.5 py-0.5 sm:py-1 rounded-full shadow-md transition-transform group-hover:scale-105 border border-white/30 tracking-wider flex-shrink-0">
                     TBS
                 </span>
-                <div class="leading-tight text-shadow-hero">
-                    <span class="block font-black text-lg sm:text-2xl tracking-wide text-white group-hover:text-pink-200 transition">五等分の花嫁</span>
-                    <span class="block text-[8px] sm:text-[10px] text-pink-200/90 font-semibold tracking-wider font-serif">THE QUINTESSENTIAL QUINTUPLETS</span>
+                <div class="leading-tight text-shadow-hero min-w-0">
+                    <span class="block font-black text-base sm:text-2xl tracking-wide text-white group-hover:text-pink-200 transition truncate">五等分の花嫁</span>
+                    <span class="block text-[7px] sm:text-[10px] text-pink-200/90 font-semibold tracking-wider font-serif truncate">THE QUINTESSENTIAL QUINTUPLETS</span>
                 </div>
             </a>
 
@@ -345,17 +348,17 @@
                 </aside>
 
                 
-                <div class="absolute top-24 sm:top-28 lg:top-32 left-4 sm:left-12 lg:left-24 z-20 max-w-xl space-y-2 select-none">
-                    <div class="inline-flex items-center gap-2 bg-black/40 backdrop-blur-md border border-pink-400/50 px-3.5 py-1 rounded-full text-pink-300 text-[11px] sm:text-xs font-black shadow-lg">
-                        <span class="w-2 h-2 rounded-full bg-[#ff007a] animate-ping"></span>
-                        <span data-i18n="hero.tagline">かわいさ500%の五人五色ラブコメディ！</span>
+                <div class="absolute top-20 sm:top-28 lg:top-32 left-3.5 right-3.5 sm:right-auto sm:left-12 lg:left-24 z-20 max-w-[calc(100vw-1.75rem)] sm:max-w-xl space-y-1.5 sm:space-y-2 select-none pr-2">
+                    <div class="inline-flex items-center gap-1.5 sm:gap-2 bg-black/50 backdrop-blur-md border border-pink-400/50 px-3 py-1 rounded-full text-pink-300 text-[10px] sm:text-xs font-black shadow-lg max-w-full">
+                        <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#ff007a] animate-ping flex-shrink-0"></span>
+                        <span data-i18n="hero.tagline" class="truncate sm:whitespace-normal">かわいさ500%の五人五色ラブコメディ！</span>
                     </div>
 
-                    <h1 data-i18n="hero.title" class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white text-shadow-hero font-sans leading-none">
+                    <h1 data-i18n="hero.title" class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white text-shadow-hero font-sans leading-none break-words">
                         五等分の花嫁
                     </h1>
 
-                    <p data-i18n="hero.subtitle" class="text-xs sm:text-sm lg:text-base font-bold text-pink-200 tracking-widest font-serif text-shadow-sub uppercase">
+                    <p data-i18n="hero.subtitle" class="text-xs sm:text-sm lg:text-base font-bold text-pink-200 tracking-widest font-serif text-shadow-sub uppercase truncate sm:whitespace-normal">
                         The Quintessential Quintuplets
                     </p>
 
@@ -364,19 +367,19 @@
                     </p>
                 </div>
 
-                
-                <div class="absolute right-4 sm:right-8 lg:right-12 bottom-6 sm:bottom-8 z-20 flex items-center gap-3">
+
+                <div class="absolute right-3.5 sm:right-8 lg:right-12 bottom-4 sm:bottom-8 z-20 flex items-center gap-2 sm:gap-3">
                     <button type="button"
                             onclick="openPvModal()"
                             aria-label="Tonton PV Anime Terbaru"
-                            class="group flex items-center gap-3 bg-black/60 hover:bg-black/80 backdrop-blur-md pl-3 pr-4 sm:pl-4 sm:pr-5 py-2.5 rounded-full border border-pink-500/60 shadow-2xl transition transform hover:scale-105 active:scale-95 text-white">
-                        <div class="relative w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-gradient-to-tr from-[#ff007a] to-rose-500 flex items-center justify-center text-white shadow-lg shadow-pink-500/40">
+                            class="group flex items-center gap-2 sm:gap-3 bg-black/60 hover:bg-black/80 backdrop-blur-md pl-2.5 pr-3.5 sm:pl-4 sm:pr-5 py-2 sm:py-2.5 rounded-full border border-pink-500/60 shadow-2xl transition transform hover:scale-105 active:scale-95 text-white">
+                        <div class="relative w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-gradient-to-tr from-[#ff007a] to-rose-500 flex items-center justify-center text-white shadow-lg shadow-pink-500/40 flex-shrink-0">
                             <span class="absolute inset-0 rounded-full border-2 border-pink-400 animate-pulse-ring pointer-events-none"></span>
-                            <svg class="w-4 h-4 sm:w-5 sm:h-5 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                         </div>
                         <div class="text-left">
-                            <span class="block text-[9px] sm:text-[10px] uppercase font-bold text-pink-300 font-serif tracking-widest">OFFICIAL PV</span>
-                            <span data-i18n="hero.btn_pv" class="block text-xs sm:text-sm font-black text-white group-hover:text-pink-200 transition">プロモーション映像</span>
+                            <span class="block text-[8px] sm:text-[10px] uppercase font-bold text-pink-300 font-serif tracking-widest">OFFICIAL PV</span>
+                            <span data-i18n="hero.btn_pv" class="block text-[11px] sm:text-sm font-black text-white group-hover:text-pink-200 transition">プロモーション映像</span>
                         </div>
                     </button>
                 </div>
@@ -384,17 +387,17 @@
             </div>
         </section>
 
-        
-        <section class="relative z-30 -mt-5 sm:-mt-7 px-4 max-w-4xl mx-auto">
+
+        <section class="relative z-30 -mt-4 sm:-mt-7 px-3 sm:px-4 max-w-4xl mx-auto w-full">
             <a href="/5Hanayome/news"
-               class="block bg-white hover:bg-pink-50/70 border-2 border-[#ff007a] rounded-full p-3 sm:p-4 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 group">
-                <div class="flex items-center justify-between gap-3 sm:gap-4 px-2 sm:px-4">
-                    <div class="flex items-center gap-3 sm:gap-4">
-                        <span class="bg-[#ff007a] text-white text-[10px] sm:text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-sm flex-shrink-0">
+               class="block bg-white hover:bg-pink-50/70 border-2 border-[#ff007a] rounded-2xl sm:rounded-full p-2.5 sm:p-4 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 group min-w-0">
+                <div class="flex items-center justify-between gap-2 sm:gap-4 px-1 sm:px-4 min-w-0">
+                    <div class="flex items-center gap-2 sm:gap-4 min-w-0">
+                        <span class="bg-[#ff007a] text-white text-[10px] sm:text-xs font-black px-2.5 sm:px-3 py-1 rounded-full uppercase tracking-wider shadow-sm flex-shrink-0">
                             PROJECT
                         </span>
-                        <div class="text-left">
-                            <h2 data-i18n="promo.badge_title" class="text-xs sm:text-sm md:text-base font-black text-slate-900 group-hover:text-[#ff007a] transition leading-tight">
+                        <div class="text-left min-w-0">
+                            <h2 data-i18n="promo.badge_title" class="text-[11px] sm:text-sm md:text-base font-black text-slate-900 group-hover:text-[#ff007a] transition leading-tight truncate sm:whitespace-normal break-words">
                                 新作アニメプロジェクト始動！TVアニメ「五等分の花嫁＊」制作決定
                             </h2>
                             <p data-i18n="promo.badge_sub" class="text-[10px] sm:text-xs text-slate-500 font-medium hidden sm:block mt-0.5">
@@ -404,6 +407,12 @@
                     </div>
 
                     <div class="flex items-center gap-1 text-[#ff007a] font-extrabold text-xs sm:text-sm flex-shrink-0 group-hover:translate-x-1 transition-transform">
+                        <span data-i18n="promo.badge_action" class="hidden sm:inline">詳細を見る</span>
+                        <span>&rarr;</span>
+                    </div>
+                </div>
+            </a>
+        </section>
                         <span data-i18n="promo.badge_action" class="hidden sm:inline">詳細を見る</span>
                         <span>&rarr;</span>
                     </div>
@@ -734,7 +743,7 @@
 
     
     <div id="promo-modal-card"
-         class="relative w-full max-w-2xl sm:max-w-3xl md:max-w-4xl bg-gradient-to-br from-pink-100 via-white to-pink-50 rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_60px_-15px_rgba(255,0,122,0.35),0_0_50px_rgba(0,0,0,0.8)] border-2 border-white/80 transform scale-90 transition-all duration-500 ease-out">
+         class="relative w-full max-w-[90vw] sm:max-w-3xl md:max-w-4xl max-h-[85vh] overflow-y-auto custom-scrollbar bg-gradient-to-br from-pink-100 via-white to-pink-50 rounded-2xl sm:rounded-3xl shadow-[0_25px_60px_-15px_rgba(255,0,122,0.35),0_0_50px_rgba(0,0,0,0.8)] border-2 border-white/80 transform scale-90 transition-all duration-500 ease-out">
 
         
         <button type="button"

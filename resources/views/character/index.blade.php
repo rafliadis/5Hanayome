@@ -29,10 +29,10 @@
                 </div>
 
                 {{-- Filter Pills: All / Quintuplets / Tutor --}}
-                <div class="flex items-center gap-1.5">
-                    <button type="button" onclick="filterCharacters('all')" class="char-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-[#ff007a] text-white shadow" data-filter="all" data-i18n="character.filter_all">All (6)</button>
-                    <button type="button" onclick="filterCharacters('quintuplets')" class="char-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20" data-filter="quintuplets" data-i18n="character.filter_quintuplets">中野家五つ子 (5)</button>
-                    <button type="button" onclick="filterCharacters('tutor')" class="char-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20" data-filter="tutor" data-i18n="character.filter_tutor">家庭教師 (1)</button>
+                <div class="flex items-center gap-1.5 overflow-x-auto max-w-full py-1 custom-scrollbar">
+                    <button type="button" onclick="filterCharacters('all')" class="char-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-[#ff007a] text-white shadow shrink-0" data-filter="all" data-i18n="character.filter_all">All (6)</button>
+                    <button type="button" onclick="filterCharacters('quintuplets')" class="char-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20 shrink-0" data-filter="quintuplets" data-i18n="character.filter_quintuplets">中野家五つ子 (5)</button>
+                    <button type="button" onclick="filterCharacters('tutor')" class="char-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition bg-white/10 text-slate-300 hover:bg-white/20 shrink-0" data-filter="tutor" data-i18n="character.filter_tutor">家庭教師 (1)</button>
                 </div>
             </div>
 

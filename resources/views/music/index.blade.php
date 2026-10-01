@@ -207,21 +207,21 @@
                     {{-- Filter Tabs & Search Bar --}}
                     <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-slate-950/60 p-2 rounded-2xl border border-white/10">
                         {{-- Category Filter Pills --}}
-                        <div class="flex items-center gap-1 overflow-x-auto pb-1 sm:pb-0 scrollbar-none" role="tablist">
+                        <div class="flex items-center gap-1 overflow-x-auto pb-1 sm:pb-0 scrollbar-none max-w-full" role="tablist">
                             <button type="button" onclick="filterCategory('all')" id="tab-all" data-i18n="music.tab_all"
-                                    class="category-tab px-3.5 py-1.5 rounded-xl text-xs font-bold transition bg-[#ff007a] text-white shadow-md">
+                                    class="category-tab px-3.5 py-1.5 rounded-xl text-xs font-bold transition bg-[#ff007a] text-white shadow-md shrink-0">
                                 Semua (All)
                             </button>
                             <button type="button" onclick="filterCategory('op')" id="tab-op" data-i18n="music.tab_op"
-                                    class="category-tab px-3.5 py-1.5 rounded-xl text-xs font-bold transition bg-slate-800/80 text-slate-300 hover:text-white">
+                                    class="category-tab px-3.5 py-1.5 rounded-xl text-xs font-bold transition bg-slate-800/80 text-slate-300 hover:text-white shrink-0">
                                 OP
                             </button>
                             <button type="button" onclick="filterCategory('ed')" id="tab-ed" data-i18n="music.tab_ed"
-                                    class="category-tab px-3.5 py-1.5 rounded-xl text-xs font-bold transition bg-slate-800/80 text-slate-300 hover:text-white">
+                                    class="category-tab px-3.5 py-1.5 rounded-xl text-xs font-bold transition bg-slate-800/80 text-slate-300 hover:text-white shrink-0">
                                 ED
                             </button>
                             <button type="button" onclick="filterCategory('special')" id="tab-special" data-i18n="music.tab_special"
-                                    class="category-tab px-3.5 py-1.5 rounded-xl text-xs font-bold transition bg-slate-800/80 text-slate-300 hover:text-white">
+                                    class="category-tab px-3.5 py-1.5 rounded-xl text-xs font-bold transition bg-slate-800/80 text-slate-300 hover:text-white shrink-0">
                                 Movie / OVA
                             </button>
                         </div>

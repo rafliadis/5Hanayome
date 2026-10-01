@@ -100,6 +100,9 @@
             font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', 'Plus Jakarta Sans', sans-serif;
             -webkit-tap-highlight-color: transparent;
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
         }
 
         /* Focus rings for accessibility */
@@ -144,7 +147,7 @@
 
     @stack('styles')
 </head>
-<body class="bg-slate-950 text-slate-800 antialiased min-h-screen flex flex-col selection:bg-[#ff007a] selection:text-white">
+<body class="bg-slate-950 text-slate-800 antialiased min-h-screen w-full max-w-full overflow-x-hidden flex flex-col selection:bg-[#ff007a] selection:text-white">
 
     {{-- Accessibility Skip Link --}}
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[99999] focus:bg-[#ff007a] focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold">
